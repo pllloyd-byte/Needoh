@@ -5,28 +5,37 @@
       "name": "Jukupop",
       "type": "shopify",
       "base_url": "https://jukupop.com",
-      "collections": ["needoh-squishy-fidget-toys-shop-stress-balls-fidget-fun"],
+      "collections": [
+        "needoh-squishy-fidget-toys-shop-stress-balls-fidget-fun"
+      ],
       "required": true
     },
     {
       "name": "Funky Fidgets",
       "type": "shopify",
       "base_url": "https://funkyfidgetsshop.co.uk",
-      "collections": ["needoh-brand"],
+      "collections": [
+        "needoh-brand"
+      ],
       "required": true
     },
     {
       "name": "So Realistic",
       "type": "shopify",
       "base_url": "https://www.sorealistic.co.uk",
-      "collections": ["needoh"],
+      "collections": [
+        "needoh"
+      ],
       "required": true
     },
     {
       "name": "Bigjigs Toys",
       "type": "shopify",
       "base_url": "https://www.bigjigstoys.co.uk",
-      "collections": ["nee-doh", "needoh"],
+      "collections": [
+        "nee-doh",
+        "needoh"
+      ],
       "keyword_filter": true,
       "search_all_products_fallback": true,
       "required": true
@@ -35,7 +44,25 @@
       "name": "Plush Paradise",
       "type": "shopify",
       "base_url": "https://plushparadise.co.uk",
-      "collections": ["needoh", "needoh-brand", "nee-doh"],
+      "collections": [
+        "needoh",
+        "needoh-brand",
+        "nee-doh"
+      ],
+      "search_all_products_fallback": true,
+      "required": true
+    },
+    {
+      "name": "The Dyslexia Shop",
+      "type": "shopify",
+      "base_url": "https://www.thedyslexiashop.co.uk",
+      "collections": [
+        "needoh",
+        "nee-doh",
+        "needoh-toys",
+        "schylling"
+      ],
+      "keyword_filter": true,
       "search_all_products_fallback": true,
       "required": true
     },
@@ -43,7 +70,9 @@
       "name": "Mulberry Bush",
       "type": "html",
       "base_url": "https://www.mulberrybush.co.uk",
-      "listing_urls": ["https://www.mulberrybush.co.uk/needoh"],
+      "listing_urls": [
+        "https://www.mulberrybush.co.uk/needoh"
+      ],
       "required": false
     },
     {
@@ -60,7 +89,9 @@
       "name": "Urban Outfitters",
       "type": "html",
       "base_url": "https://www.urbanoutfitters.com",
-      "listing_urls": ["https://www.urbanoutfitters.com/en-gb/search?q=needoh"],
+      "listing_urls": [
+        "https://www.urbanoutfitters.com/en-gb/search?q=needoh"
+      ],
       "required": false
     }
   ]
