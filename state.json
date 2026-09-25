@@ -870,7 +870,7 @@
    "in_stock": false,
    "last_change": "2026-09-25T08:56:30+00:00",
    "name": "NeeDoh Super Fuzz Ball (PLEASE ALLOW 7 DAYS FOR DISPATCH)",
-   "price": "£27.00",
+   "price": "£28.00",
    "shop": "So Realistic",
    "url": "https://www.sorealistic.co.uk/products/needoh-super-fuzz-ball"
   },
@@ -969,7 +969,7 @@
    "in_stock": false,
    "last_change": "2026-09-25T08:56:30+00:00",
    "name": "Official Authentic NEEDOH Advent Calendar 2026",
-   "price": "£54.00",
+   "price": "£55.00",
    "shop": "So Realistic",
    "url": "https://www.sorealistic.co.uk/products/official-authentic-needoh-advent-calendar-2026"
   }
@@ -979,40 +979,40 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-25T10:04:32+00:00"
+   "last_success": "2026-09-25T10:23:40+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-25T10:04:32+00:00"
+   "last_success": "2026-09-25T10:23:40+00:00"
   },
   "Jukupop": {
-   "consecutive_failures": 5,
+   "consecutive_failures": 6,
    "last_error": "no products returned from https://jukupop.com/collections/needoh-squishy-fidget-toys-shop-stress-balls-fidget-fun/products.json"
   },
   "Menkind": {
-   "consecutive_failures": 5,
+   "consecutive_failures": 6,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 5,
+   "consecutive_failures": 6,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-25T10:04:32+00:00"
+   "last_success": "2026-09-25T10:23:40+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-25T10:04:32+00:00"
+   "last_success": "2026-09-25T10:23:40+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 5,
+   "consecutive_failures": 6,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
