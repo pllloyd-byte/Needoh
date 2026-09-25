@@ -1,0 +1,58 @@
+name: Check NeeDoh stock
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"   # every 5 minutes (GitHub may run it a little late when busy)
+  workflow_dispatch:         # adds a "Run workflow" button on the Actions tab
+    inputs:
+      test_notification:
+        description: "Just send a test notification to my phone"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write            # lets the job save state.json back to the repo
+
+concurrency:
+  group: needoh-stock-check  # never run two checks at the same time
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Send test notification
+        if: ${{ inputs.test_notification }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python checker.py --test-notification
+
+      - name: Check shops
+        if: ${{ !inputs.test_notification }}
+        env:
+          NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
+        run: python checker.py
+
+      - name: Save what we've seen (state.json)
+        if: ${{ !inputs.test_notification }}
+        run: |
+          git config user.name "needoh-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add state.json 2>/dev/null || exit 0
+          if git diff --cached --quiet; then
+            echo "No changes to save."
+            exit 0
+          fi
+          git commit -m "Update stock state"
+          for i in 1 2 3 4; do
+            git pull --rebase --quiet && git push && exit 0
+            sleep $((i * 3))
+          done
+          echo "Could not save state.json" && exit 1

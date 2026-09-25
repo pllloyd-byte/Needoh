@@ -1,0 +1,67 @@
+{
+  "_help": "The list of shops to check. 'shopify' shops are read from their products.json feed (reliable). 'html' shops are read from their web pages (best effort - failures are logged and skipped). 'required': false means failures are never alerted on.",
+  "shops": [
+    {
+      "name": "Jukupop",
+      "type": "shopify",
+      "base_url": "https://jukupop.com",
+      "collections": ["needoh-squishy-fidget-toys-shop-stress-balls-fidget-fun"],
+      "required": true
+    },
+    {
+      "name": "Funky Fidgets",
+      "type": "shopify",
+      "base_url": "https://funkyfidgetsshop.co.uk",
+      "collections": ["needoh-brand"],
+      "required": true
+    },
+    {
+      "name": "So Realistic",
+      "type": "shopify",
+      "base_url": "https://www.sorealistic.co.uk",
+      "collections": ["needoh"],
+      "required": true
+    },
+    {
+      "name": "Bigjigs Toys",
+      "type": "shopify",
+      "base_url": "https://www.bigjigstoys.co.uk",
+      "collections": ["nee-doh", "needoh"],
+      "keyword_filter": true,
+      "search_all_products_fallback": true,
+      "required": true
+    },
+    {
+      "name": "Plush Paradise",
+      "type": "shopify",
+      "base_url": "https://plushparadise.co.uk",
+      "collections": ["needoh", "needoh-brand", "nee-doh"],
+      "search_all_products_fallback": true,
+      "required": true
+    },
+    {
+      "name": "Mulberry Bush",
+      "type": "html",
+      "base_url": "https://www.mulberrybush.co.uk",
+      "listing_urls": ["https://www.mulberrybush.co.uk/needoh"],
+      "required": false
+    },
+    {
+      "name": "Menkind",
+      "type": "html",
+      "base_url": "https://www.menkind.co.uk",
+      "listing_urls": [
+        "https://www.menkind.co.uk/toys/fidget-toys/needoh",
+        "https://www.menkind.co.uk/search?q=needoh"
+      ],
+      "required": false
+    },
+    {
+      "name": "Urban Outfitters",
+      "type": "html",
+      "base_url": "https://www.urbanoutfitters.com",
+      "listing_urls": ["https://www.urbanoutfitters.com/en-gb/search?q=needoh"],
+      "required": false
+    }
+  ]
+}
