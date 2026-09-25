@@ -117,6 +117,43 @@ class ShopifyParsing(unittest.TestCase):
             with self.assertRaises(checker.FetchError):
                 checker.check_shopify({**SHOP, "collections": ["needoh"]})
 
+    def test_empty_collection_is_not_an_error(self):
+        # Some shops hide NeeDoh while it's sold out, so the collection is just empty.
+        with mock.patch.object(checker, "fetch", lambda url, want_json=False: (200, '{"products": []}')):
+            self.assertEqual(checker.check_shopify({**SHOP, "collections": ["needoh"]}), [])
+
+    def test_missing_collection_raises(self):
+        with mock.patch.object(checker, "fetch", lambda url, want_json=False: (404, "")):
+            with self.assertRaises(checker.FetchError):
+                checker.check_shopify({**SHOP, "collections": ["needoh"]})
+
+    def test_search_adds_items_missing_from_collection(self):
+        search = ('{"resources": {"results": {"products": ['
+                  '{"id": 9, "handle": "needoh-gumdrop", "title": "NeeDoh Gumdrop", "price": "8.50", "available": true},'
+                  '{"id": 10, "handle": "dumpling", "title": "Mystery Squishy Dumpling", "price": "5.00", "available": true}'
+                  ']}}}')
+
+        def fake_fetch(url, want_json=False):
+            return (200, search) if "suggest.json" in url else (200, '{"products": []}')
+
+        with mock.patch.object(checker, "fetch", fake_fetch):
+            products = checker.check_shopify({**SHOP, "collections": ["needoh"]})
+        self.assertEqual([(p["name"], p["price"], p["in_stock"]) for p in products],
+                         [("NeeDoh Gumdrop", "£8.50", True)])
+        self.assertEqual(products[0]["url"], "https://shop.example/products/needoh-gumdrop")
+
+    def test_recheck_missing_product(self):
+        state = fresh_state()
+        state["products"]["Test Shop|9"] = {"shop": "Test Shop", "name": "NeeDoh Gumdrop", "price": "£8.50",
+                                            "url": "https://shop.example/products/needoh-gumdrop", "in_stock": True}
+        with mock.patch.object(checker, "fetch",
+                               lambda url, want_json=False: (200, '{"available": true, "price": 850}')):
+            [p] = checker.recheck_missing(state, SHOP, [])
+        self.assertTrue(p["in_stock"])
+        self.assertEqual(p["price"], "£8.50")
+        with mock.patch.object(checker, "fetch", lambda url, want_json=False: (404, "")):
+            self.assertEqual(checker.recheck_missing(state, SHOP, []), [])
+
 
 LISTING_HTML = """
 <html><body>

@@ -94,9 +94,17 @@ That's it! 🎉
 | So Realistic | Shopify product feed ([collection](https://www.sorealistic.co.uk/collections/needoh)) |
 | Bigjigs Toys | Shopify product feed ([collection](https://www.bigjigstoys.co.uk/collections/nee-doh)), only items mentioning NeeDoh. If the collection disappears, it searches the whole shop instead |
 | Plush Paradise | Shopify product feed ([collection](https://plushparadise.co.uk/collections/needoh)). Same fallback as Bigjigs |
-| Mulberry Bush | Reads the [NeeDoh page](https://www.mulberrybush.co.uk/needoh) and product pages (best effort) |
-| Menkind | Reads the [NeeDoh category](https://www.menkind.co.uk/toys/fidget-toys/needoh) and search (best effort) |
-| Urban Outfitters | Reads [search results](https://www.urbanoutfitters.com/en-gb/search?q=needoh) (best effort, often blocks bots) |
+| Mulberry Bush | Reads the [NeeDoh page](https://www.mulberrybush.co.uk/needoh) (best effort). Currently **blocked** by Cloudflare's robot check. Their NeeDoh comes from Bigjigs, which is covered above |
+| Menkind | Reads the [NeeDoh category](https://www.menkind.co.uk/toys/fidget-toys/needoh) (best effort). Currently **blocked** by Cloudflare's robot check |
+| Urban Outfitters | Reads [search results](https://www.urbanoutfitters.com/en-gb/search?q=needoh) (best effort). Currently **blocked** by an anti-bot service |
+
+For the Shopify shops, the checker also asks the shop's own search for "NeeDoh", which catches
+items that were never added to the NeeDoh collection. Some shops (e.g. Jukupop, Plush Paradise)
+hide NeeDoh completely while it's sold out, so "0 products" there is normal. The products
+will appear, and you'll be alerted, when they come back.
+
+The blocked shops are still tried on every run in case they stop blocking. They never send you
+warnings, and each run's summary on the Actions page shows them as failed.
 
 To add or change a shop, edit `shops.json`. Any Shopify shop can be added by copying one of
 the `"type": "shopify"` entries and changing the name, `base_url` and collection name.

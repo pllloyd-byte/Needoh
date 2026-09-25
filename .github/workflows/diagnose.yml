@@ -1,8 +1,0 @@
-name: Diagnose shops (temporary)
-on: workflow_dispatch
-jobs:
-  diagnose:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - run: python3 diagnose.py

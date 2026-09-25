@@ -109,34 +109,47 @@ def check_shopify(shop):
         url = f"{base}/collections/{handle}/products.json"
         tried.append(url)
         raw = _shopify_pages(url, max_pages=10)
-        if raw:
+        if raw is not None:
+            # An empty collection is fine: some shops hide NeeDoh while it's sold out.
             log(f"  using collection '{handle}' ({len(raw)} products)")
             break
     use_filter = shop.get("keyword_filter", False)
-    if not raw and shop.get("search_all_products_fallback"):
+    if raw is None and shop.get("search_all_products_fallback"):
         url = f"{base}/products.json"
         tried.append(url)
         log("  no NeeDoh collection found, searching the whole shop for 'NeeDoh'")
         raw = _shopify_pages(url, max_pages=30)
         use_filter = True
-    if not raw:
-        raise FetchError("no products returned from " + ", ".join(tried))
+    if raw is None:
+        raise FetchError("not found: " + ", ".join(tried))
 
-    products = []
+    products = {}
     for p in raw:
         if use_filter and not _mentions_needoh(p):
             continue
-        products.append(shopify_product(shop, p))
-    return products
+        item = shopify_product(shop, p)
+        products[item["key"]] = item
+
+    # Also ask the shop's own search, to catch NeeDoh items not added to the collection.
+    extra = 0
+    for p in _shopify_search(base):
+        if _mentions_needoh(p):
+            item = _search_product(shop, p)
+            if item["key"] not in products:
+                products[item["key"]] = item
+                extra += 1
+    if extra:
+        log(f"  +{extra} more from the shop's search")
+    return list(products.values())
 
 
 def _shopify_pages(url, max_pages):
-    """Read every page of a Shopify products.json. Returns [] if it doesn't exist."""
+    """Read every page of a Shopify products.json. Returns None if it doesn't exist."""
     items = []
     for page in range(1, max_pages + 1):
         status, text = fetch(f"{url}?limit=250&page={page}", want_json=True)
-        if status == 404:
-            return []
+        if status == 404 and page == 1:
+            return None
         if status != 200:
             if items:
                 break
@@ -149,6 +162,52 @@ def _shopify_pages(url, max_pages):
         if len(batch) < 250:
             break
     return items
+
+
+def _shopify_search(base):
+    """Shopify's predictive search (max 10 results). Best effort: returns [] on any problem."""
+    url = (f"{base}/search/suggest.json?q=needoh"
+           "&resources[type]=product&resources[limit]=10")
+    try:
+        status, text = fetch(url, want_json=True)
+        if status != 200:
+            return []
+        return json.loads(text)["resources"]["results"]["products"]
+    except Exception:
+        return []
+
+
+def _search_product(shop, p):
+    try:
+        price = f"{shop.get('currency_symbol', '£')}{float(p.get('price_min') or p.get('price')):.2f}"
+    except (TypeError, ValueError):
+        price = "price unknown"
+    return {
+        "key": f"{shop['name']}|{p.get('id') or p.get('handle')}",
+        "shop": shop["name"],
+        "name": html.unescape(p.get("title") or "Unknown product").strip(),
+        "price": price,
+        "url": f"{shop['base_url'].rstrip('/')}/products/{p.get('handle')}",
+        "in_stock": bool(p.get("available")),
+    }
+
+
+def recheck_shopify_product(shop, key, entry):
+    """Look up one product page directly (for products that dropped out of the lists).
+    Returns an updated product, or None if it's gone or couldn't be checked."""
+    try:
+        status, text = fetch(entry["url"] + ".js", want_json=True)
+        if status != 200:
+            return None
+        p = json.loads(text)
+    except Exception:
+        return None
+    try:
+        price = f"{shop.get('currency_symbol', '£')}{int(p.get('price_min', p.get('price'))) / 100:.2f}"
+    except (TypeError, ValueError):
+        price = entry.get("price", "price unknown")
+    return {"key": key, "shop": shop["name"], "name": entry["name"], "price": price,
+            "url": entry["url"], "in_stock": bool(p.get("available"))}
 
 
 def _mentions_needoh(p):
@@ -479,6 +538,20 @@ def process_shop_result(state, shop, products, now):
     return alerts
 
 
+def recheck_missing(state, shop, products):
+    """Products that were in stock but vanished from this check: look them up directly,
+    so a product dropping out of search results isn't mistaken for selling out."""
+    seen = {p["key"] for p in products}
+    missing = [(k, v) for k, v in state["products"].items()
+               if v.get("shop") == shop["name"] and v.get("in_stock") and k not in seen]
+    found = []
+    for key, entry in missing[:20]:
+        item = recheck_shopify_product(shop, key, entry)
+        if item:
+            found.append(item)
+    return found
+
+
 def record_failure(state, shop, error, now, send):
     shop_state = state["shops"].setdefault(shop["name"], {})
     shop_state["consecutive_failures"] = shop_state.get("consecutive_failures", 0) + 1
@@ -527,6 +600,8 @@ def run(args):
             record_failure(state, shop, e, now, send)
             summary_rows.append((shop["name"], "failed", str(e)[:150]))
             continue
+        if shop["type"] == "shopify":
+            products += recheck_missing(state, shop, products)
         in_stock = [p for p in products if p["in_stock"]]
         log(f"  {len(products)} NeeDoh products, {len(in_stock)} in stock")
         if args.dry_run:
