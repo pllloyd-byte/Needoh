@@ -694,6 +694,15 @@
    "shop": "Funky Fidgets",
    "url": "https://funkyfidgetsshop.co.uk/products/coming-soon-needoh-fuzzball-wild-cats"
   },
+  "Jukupop|14991525183812": {
+   "first_seen": "2026-09-30T21:14:03+00:00",
+   "in_stock": false,
+   "last_change": "2026-09-30T21:14:03+00:00",
+   "name": "Teenie NeeDoh Cool Cats Kittens Fidget Toy Set - Sensory Toy",
+   "price": "£9.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/teenie-needoh-cool-cats-fidget-toy-set-pack-of-3-sensory-toy"
+  },
   "Jukupop|14991542747460": {
    "first_seen": "2026-09-28T10:23:11+00:00",
    "in_stock": false,
@@ -702,6 +711,33 @@
    "price": "from £7.99",
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/needoh-nice-cube-anti-stress-sensory-adhd-fidget-toy-3-translucent-colors-1-sent-non-toxic-maltose-sugar"
+  },
+  "Jukupop|15546925908292": {
+   "first_seen": "2026-09-30T21:14:03+00:00",
+   "in_stock": false,
+   "last_change": "2026-09-30T21:14:03+00:00",
+   "name": "NeeDoh Teenie Fuzz Ball Multipack Sensory Fidget Toy",
+   "price": "£9.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-teenie-fuzz-ball-multipack-sensory-fidget-toy"
+  },
+  "Jukupop|15655372587332": {
+   "first_seen": "2026-09-30T21:14:03+00:00",
+   "in_stock": false,
+   "last_change": "2026-09-30T21:14:03+00:00",
+   "name": "NeeDoh 2026 Advent Calendar – 24 Mini Fidget & Sensory Toys, Stress Relief & Mindful Play",
+   "price": "£39.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-2026-advent-calendar-24-mini-fidget-sensory-toys-stress-relief-mindful-play"
+  },
+  "Jukupop|15689697558852": {
+   "first_seen": "2026-09-30T21:14:03+00:00",
+   "in_stock": false,
+   "last_change": "2026-09-30T21:14:03+00:00",
+   "name": "Halloween Sensory Bundles – Scrunchems, NeeDoh & Speks",
+   "price": "£34.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/halloween-sensory-bundle"
   },
   "So Realistic|10282797990221": {
    "first_seen": "2026-09-25T08:56:30+00:00",
@@ -1519,48 +1555,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 455,
+   "consecutive_failures": 456,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 455,
+   "consecutive_failures": 456,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-09-30T20:54:58+00:00"
+   "last_success": "2026-09-30T21:14:03+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 455,
+   "consecutive_failures": 456,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
