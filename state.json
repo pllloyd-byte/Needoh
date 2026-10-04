@@ -712,6 +712,24 @@
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/teenie-needoh-cool-cats-fidget-toy-set-pack-of-3-sensory-toy"
   },
+  "Jukupop|14991533343044": {
+   "first_seen": "2026-10-04T15:03:19+00:00",
+   "in_stock": false,
+   "last_change": "2026-10-04T15:03:19+00:00",
+   "name": "NeeDoh Dream Drop Squishy Fidget Toy - For Stress, Anxiety, ADHD, Autism - Maltose Sugar Filling",
+   "price": "from £7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-dream-drop-squishy-fidget-toy-for-stress-anxiety-adhd-autism-maltose-sugar-filling"
+  },
+  "Jukupop|14991542518084": {
+   "first_seen": "2026-10-04T15:03:19+00:00",
+   "in_stock": false,
+   "last_change": "2026-10-04T15:03:19+00:00",
+   "name": "NeeDoh Gumdrop Squishie Fidget Toy Anti Stress Sensory ADHD - Textured squishy fidget toys, 4 assorted colours - Maltose Sugar Filling",
+   "price": "from £7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-gumdrop-squishie-fidget-toy-anti-stress-sensory-adhd-textured-squishy-fidget-toys-4-assorted-colours-maltose-sugar-filling"
+  },
   "Jukupop|14991542747460": {
    "first_seen": "2026-09-28T10:23:11+00:00",
    "in_stock": false,
@@ -720,6 +738,24 @@
    "price": "from £7.99",
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/needoh-nice-cube-anti-stress-sensory-adhd-fidget-toy-3-translucent-colors-1-sent-non-toxic-maltose-sugar"
+  },
+  "Jukupop|15155089736004": {
+   "first_seen": "2026-10-04T15:03:19+00:00",
+   "in_stock": false,
+   "last_change": "2026-10-04T15:03:19+00:00",
+   "name": "Needoh Nice Cube Swirl Squishy Fidget Toy for Stress, Anxiety, ADHD & Autism",
+   "price": "£7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-nice-cube-swirl-squishy-fidget-toy-for-stress-anxiety-adhd-autism"
+  },
+  "Jukupop|15483378368836": {
+   "first_seen": "2026-10-04T15:03:19+00:00",
+   "in_stock": false,
+   "last_change": "2026-10-04T15:03:19+00:00",
+   "name": "NeeDoh Jelly Squish Jellyfish Fidget Sensory Toy",
+   "price": "£7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-jelly-squish-jellyfish-fidget-sensory-toy"
   },
   "Jukupop|15546925908292": {
    "first_seen": "2026-09-30T21:14:03+00:00",
@@ -1564,48 +1600,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 650,
+   "consecutive_failures": 651,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 650,
+   "consecutive_failures": 651,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-04T07:00:48+00:00"
+   "last_success": "2026-10-04T15:03:19+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 650,
+   "consecutive_failures": 651,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
