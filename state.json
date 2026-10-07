@@ -699,7 +699,7 @@
    "in_stock": false,
    "last_change": "2026-10-06T04:58:56+00:00",
    "name": "Halloween Bundle includes 1 NeeDoh product in each",
-   "price": "£50.00",
+   "price": "£51.00",
    "shop": "Funky Fidgets",
    "url": "https://funkyfidgetsshop.co.uk/products/halloween-bundle"
   },
@@ -1600,48 +1600,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 814,
+   "consecutive_failures": 815,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 814,
+   "consecutive_failures": 815,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-07T06:53:54+00:00"
+   "last_success": "2026-10-07T07:13:43+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 814,
+   "consecutive_failures": 815,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
