@@ -795,7 +795,7 @@
   },
   "Jukupop|15655372587332": {
    "first_seen": "2026-09-30T21:14:03+00:00",
-   "in_stock": false,
+   "in_stock": true,
    "last_change": "2026-10-08T10:05:28+00:00",
    "name": "NeeDoh 2026 Advent Calendar – 24 Mini Fidget & Sensory Toys, Stress Relief & Mindful Play",
    "price": "£39.99",
@@ -810,6 +810,15 @@
    "price": "£34.99",
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/halloween-sensory-bundle"
+  },
+  "Jukupop|15714421801284": {
+   "first_seen": "2026-10-13T16:55:02+00:00",
+   "in_stock": false,
+   "last_change": "2026-10-13T16:55:02+00:00",
+   "name": "NeeDoh Nice Cube Candy Swirl Fidget Toy",
+   "price": "£7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh-nice-cube-candy-swirl-fidget-toy"
   },
   "Plush Paradise|16069260771709": {
    "first_seen": "2026-10-12T14:39:10+00:00",
@@ -1636,48 +1645,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 1252,
+   "consecutive_failures": 1253,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 1252,
+   "consecutive_failures": 1253,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-10-13T16:30:54+00:00"
+   "last_success": "2026-10-13T16:55:02+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 1252,
+   "consecutive_failures": 1253,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
