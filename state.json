@@ -820,6 +820,15 @@
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/needoh-teenie-fuzz-ball-multipack-sensory-fidget-toy"
   },
+  "Jukupop|15546990920004": {
+   "first_seen": "2026-11-11T15:28:36+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-11T15:28:36+00:00",
+   "name": "Super NeeDoh Fuzz Ball - Giant Fuzzy Stress Ball Sensory Toy",
+   "price": "£14.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/super-needoh-fuzz-ball-giant-fuzzy-stress-ball-sensory-toy"
+  },
   "Jukupop|15655372587332": {
    "first_seen": "2026-09-30T21:14:03+00:00",
    "in_stock": false,
@@ -1699,48 +1708,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 1830,
+   "consecutive_failures": 1831,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 1830,
+   "consecutive_failures": 1831,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-11T07:19:52+00:00"
+   "last_success": "2026-11-11T15:28:36+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 1830,
+   "consecutive_failures": 1831,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
