@@ -42,8 +42,8 @@ IN_STOCK_WORDS = ("instock", "in stock", "limitedavailability", "onlineonly")
 CURRENCY_SYMBOLS = {"GBP": "£", "USD": "$", "EUR": "€"}
 
 # Send a "this shop keeps failing" push after this many failed runs in a row
-# (24 runs x 5 minutes = about 2 hours). Only for shops marked "required".
-FAILURE_ALERT_AFTER = 24
+# (60 checks x 2 minutes = about 2 hours). Only for shops marked "required".
+FAILURE_ALERT_AFTER = 60
 MAX_PRODUCT_PAGES = 40       # per html shop, to stay polite
 MAX_INDIVIDUAL_ALERTS = 15   # beyond this, remaining alerts are grouped into one push
 

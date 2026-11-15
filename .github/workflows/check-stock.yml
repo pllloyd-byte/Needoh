@@ -1,8 +1,16 @@
 name: Check NeeDoh stock
 
+# How this works:
+# GitHub's own schedule is unreliable for frequent jobs. "Every 5 minutes"
+# often turns into "every few hours". So instead, one run stays alive and
+# checks the shops every CHECK_EVERY_SECONDS for about 5h40m (GitHub's limit
+# is 6 hours per job). Just before it stops, it starts the next run itself, so
+# checking carries on around the clock. The schedule below is only a backup
+# that restarts the chain if it ever breaks.
+
 on:
   schedule:
-    - cron: "*/5 * * * *"   # every 5 minutes (GitHub may run it a little late when busy)
+    - cron: "*/30 * * * *"   # backup only (see above)
   workflow_dispatch:         # adds a "Run workflow" button on the Actions tab
     inputs:
       test_notification:
@@ -12,15 +20,20 @@ on:
 
 permissions:
   contents: write            # lets the job save state.json back to the repo
+  actions: write             # lets the job start the next run
 
 concurrency:
   group: needoh-stock-check  # never run two checks at the same time
   cancel-in-progress: false
 
+env:
+  CHECK_EVERY_SECONDS: 120   # how often to check the shops (2 minutes)
+  KEEP_RUNNING_MINUTES: 340  # how long each run keeps checking before handing over
+
 jobs:
   check:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 355
     steps:
       - uses: actions/checkout@v4
 
@@ -34,25 +47,43 @@ jobs:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
         run: python checker.py --test-notification
 
-      - name: Check shops
+      - name: Check shops every few minutes
         if: ${{ !inputs.test_notification }}
         env:
           NTFY_TOPIC: ${{ secrets.NTFY_TOPIC }}
-        run: python checker.py
-
-      - name: Save what we've seen (state.json)
-        if: ${{ !inputs.test_notification }}
         run: |
           git config user.name "needoh-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add state.json 2>/dev/null || exit 0
-          if git diff --cached --quiet; then
-            echo "No changes to save."
-            exit 0
-          fi
-          git commit -m "Update stock state"
-          for i in 1 2 3 4; do
-            git pull --rebase --quiet && git push && exit 0
-            sleep $((i * 3))
+
+          save_state() {
+            git add state.json 2>/dev/null || return 0
+            git diff --cached --quiet && return 0
+            git commit -q -m "Update stock state"
+            for i in 1 2 3 4; do
+              git pull --rebase --quiet && git push --quiet && return 0
+              sleep $((i * 3))
+            done
+            echo "::warning::Could not save state.json (will try again next check)"
+          }
+
+          end=$(( $(date +%s) + KEEP_RUNNING_MINUTES * 60 ))
+          n=0
+          while :; do
+            n=$((n + 1))
+            start=$(date +%s)
+            echo "::group::Check $n at $(date -u +%H:%M:%S) UTC"
+            timeout 600 python checker.py || echo "::warning::Check $n failed (exit $?)"
+            save_state
+            echo "::endgroup::"
+            next=$(( start + CHECK_EVERY_SECONDS ))
+            [ "$next" -ge "$end" ] && break
+            now=$(date +%s)
+            [ "$next" -gt "$now" ] && sleep $(( next - now ))
           done
-          echo "Could not save state.json" && exit 1
+          echo "Finished $n checks."
+
+      - name: Start the next run
+        if: ${{ !inputs.test_notification && !cancelled() }}
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run check-stock.yml --ref "${{ github.ref_name }}"

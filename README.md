@@ -1,6 +1,6 @@
 # NeeDoh Stock Checker
 
-Every 5 minutes this checks UK shops for **any NeeDoh product** and sends a push
+Every 2 minutes this checks UK shops for **any NeeDoh product** and sends a push
 notification to your phone when something comes into stock. It runs on GitHub's
 computers ("GitHub Actions"), so it keeps working when your computer is off.
 
@@ -54,11 +54,11 @@ The code is public, but your topic name should stay private. GitHub "secrets" hi
    *"NeeDoh stock checker test"* notification.
 4. Run it once more **without** the tick. This first real check records what's currently in
    stock and sends you a *"NeeDoh stock checker is watching"* summary. After that it runs
-   by itself every 5 minutes.
+   by itself every 2 minutes, around the clock.
 
 That's it! 🎉
 
-> **Important:** GitHub only runs the 5-minute schedule from the repository's **default branch**
+> **Important:** GitHub only runs the schedule from the repository's **default branch**
 > (usually `main`). The checker files must be on that branch. If the **Run workflow**
 > button doesn't appear, that's the likely reason.
 
@@ -66,8 +66,12 @@ That's it! 🎉
 
 ## Good to know
 
-- **Timing:** GitHub treats "every 5 minutes" as a target. When GitHub is busy, runs can be
-  10–15 minutes apart. That's normal.
+- **Timing:** GitHub's own schedule can't be trusted for frequent checks (it often runs only
+  every few hours). So each run stays on and checks every 2 minutes for about 5h40m, then
+  starts the next run itself. In the **Actions** tab you'll see one long run every ~6 hours,
+  not lots of short ones. The 30-minute schedule is just a backup that restarts things if the
+  chain ever breaks. To change the speed, edit `CHECK_EVERY_SECONDS` in
+  `.github/workflows/check-stock.yml`.
 - **Keep the repository public.** Public repositories get GitHub Actions for free. A private one
   would use up the free allowance in about a week at this frequency. The only things visible
   publicly are the code and `state.json` (a list of NeeDoh products and whether they're in stock).
