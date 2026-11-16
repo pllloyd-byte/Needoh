@@ -55,9 +55,33 @@ jobs:
           git config user.name "needoh-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
+          # True if state.json differs from the last saved copy in a way that
+          # matters (stock, products, alerts), not just timestamps and counters.
+          important_change() {
+            python3 - <<'PY'
+          import json, subprocess, sys
+          NOISE = ("last_success", "consecutive_failures", "last_error")
+          def strip(s):
+              s = dict(s)
+              s["shops"] = {n: {k: v for k, v in d.items() if k not in NOISE}
+                            for n, d in s.get("shops", {}).items()}
+              return s
+          try:
+              old = json.loads(subprocess.check_output(["git", "show", "HEAD:state.json"]))
+          except Exception:
+              sys.exit(0)
+          new = json.load(open("state.json", encoding="utf-8"))
+          sys.exit(0 if strip(old) != strip(new) else 1)
+          PY
+          }
+
+          # Saves state.json to the repo. Between checks the file stays on disk,
+          # so it's only uploaded when something important changed, or at the
+          # end of the run ("final").
           save_state() {
-            git add state.json 2>/dev/null || return 0
-            git diff --cached --quiet && return 0
+            git diff --quiet -- state.json 2>/dev/null && return 0
+            [ "$1" = "final" ] || important_change || return 0
+            git add state.json
             git commit -q -m "Update stock state"
             for i in 1 2 3 4; do
               git pull --rebase --quiet && git push --quiet && return 0
@@ -80,6 +104,7 @@ jobs:
             now=$(date +%s)
             [ "$next" -gt "$now" ] && sleep $(( next - now ))
           done
+          save_state final
           echo "Finished $n checks."
 
       - name: Start the next run
