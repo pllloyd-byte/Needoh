@@ -894,7 +894,7 @@
   },
   "Jukupop|15714421801284": {
    "first_seen": "2026-10-13T16:55:02+00:00",
-   "in_stock": false,
+   "in_stock": true,
    "last_change": "2026-10-20T12:10:32+00:00",
    "name": "NeeDoh Nice Cube Candy Swirl Fidget Toy",
    "price": "£7.99",
@@ -1753,48 +1753,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 3075,
+   "consecutive_failures": 3201,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 3075,
+   "consecutive_failures": 3201,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-17T09:05:12+00:00"
+   "last_success": "2026-11-17T13:17:13+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 3075,
+   "consecutive_failures": 3201,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
