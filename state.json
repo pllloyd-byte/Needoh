@@ -1668,8 +1668,8 @@
   },
   "The Dyslexia Shop|16044095668606": {
    "first_seen": "2026-09-25T15:50:48+00:00",
-   "in_stock": true,
-   "last_change": "2026-09-25T15:50:48+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-19T16:49:53+00:00",
    "name": "NeeDoh Advent Calendar (2026) - 24 Fidget Toys for ADHD and Sensory Play",
    "price": "£44.99",
    "shop": "The Dyslexia Shop",
@@ -1771,48 +1771,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 4755,
+   "consecutive_failures": 4756,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 4755,
+   "consecutive_failures": 4756,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-19T16:47:54+00:00"
+   "last_success": "2026-11-19T16:49:53+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 4755,
+   "consecutive_failures": 4756,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
