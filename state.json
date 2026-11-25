@@ -721,6 +721,15 @@
    "shop": "Funky Fidgets",
    "url": "https://funkyfidgetsshop.co.uk/products/coming-soon-needoh-fuzzball-wild-cats"
   },
+  "Funky Fidgets|15434759668091": {
+   "first_seen": "2026-11-25T17:59:48+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-25T17:59:48+00:00",
+   "name": "NeeDoh Squisher the Reindoh",
+   "price": "£11.00",
+   "shop": "Funky Fidgets",
+   "url": "https://funkyfidgetsshop.co.uk/products/needoh-squisher-the-reindoh"
+  },
   "Funky Fidgets|15442505695611": {
    "first_seen": "2026-10-03T18:38:40+00:00",
    "in_stock": false,
@@ -1861,48 +1870,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 8766,
+   "consecutive_failures": 8792,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 8766,
+   "consecutive_failures": 8792,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-25T17:07:48+00:00"
+   "last_success": "2026-11-25T17:59:48+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 8766,
+   "consecutive_failures": 8792,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
