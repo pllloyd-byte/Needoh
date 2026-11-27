@@ -99,6 +99,7 @@ That's it! 🎉
 | Bigjigs Toys | Shopify product feed ([collection](https://www.bigjigstoys.co.uk/collections/nee-doh)), only items mentioning NeeDoh. If the collection disappears, it searches the whole shop instead |
 | Plush Paradise | Shopify product feed ([collection](https://plushparadise.co.uk/collections/needoh)). Same fallback as Bigjigs |
 | The Dyslexia Shop | Shopify product feed: a NeeDoh collection if one exists, otherwise a search of the whole shop for "NeeDoh" |
+| My Small World | Shopify product feed ([collection](https://www.mysmallworld.co.uk/collections/the-needoh-shop)), only items mentioning NeeDoh. Same fallback as Bigjigs |
 | Mulberry Bush | Reads the [NeeDoh page](https://www.mulberrybush.co.uk/needoh) (best effort). Currently **blocked** by Cloudflare's robot check. Their NeeDoh comes from Bigjigs, which is covered above |
 | Menkind | Reads the [NeeDoh category](https://www.menkind.co.uk/toys/fidget-toys/needoh) (best effort). Currently **blocked** by Cloudflare's robot check |
 | Urban Outfitters | Reads [search results](https://www.urbanoutfitters.com/en-gb/search?q=needoh) (best effort). Currently **blocked** by an anti-bot service |

@@ -67,6 +67,18 @@
       "required": true
     },
     {
+      "name": "My Small World",
+      "type": "shopify",
+      "base_url": "https://www.mysmallworld.co.uk",
+      "collections": [
+        "the-needoh-shop",
+        "needoh"
+      ],
+      "keyword_filter": true,
+      "search_all_products_fallback": true,
+      "required": true
+    },
+    {
       "name": "Mulberry Bush",
       "type": "html",
       "base_url": "https://www.mulberrybush.co.uk",
