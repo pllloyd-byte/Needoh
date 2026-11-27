@@ -1063,6 +1063,15 @@
    "shop": "Jukupop",
    "url": "https://jukupop.com/products/needoh®-melt-my-heart-sensory-squishy-fidget-toy"
   },
+  "Jukupop|15810347139396": {
+   "first_seen": "2026-11-27T16:54:36+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-27T16:54:36+00:00",
+   "name": "NeeDoh® Fuzz Ball Wild Cats",
+   "price": "£7.99",
+   "shop": "Jukupop",
+   "url": "https://jukupop.com/products/needoh®-fuzz-ball-wild-cats"
+  },
   "Plush Paradise|14972429369725": {
    "first_seen": "2026-11-27T00:01:21+00:00",
    "in_stock": false,
@@ -1107,6 +1116,15 @@
    "price": "£9.99",
    "shop": "Plush Paradise",
    "url": "https://plushparadise.co.uk/products/needoh-nice-cube-swirl-sensory-fidget-toy-approx-2-25-inch-x1-supplied-copy"
+  },
+  "Plush Paradise|16132541022589": {
+   "first_seen": "2026-11-27T16:54:36+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-27T16:54:36+00:00",
+   "name": "World's Smallest NeeDoh Novelty Mini Sensory Stress Ball (x1 Supplied) Colour Selected at Random (Limited to x2 per Customer/Household)",
+   "price": "£11.99",
+   "shop": "Plush Paradise",
+   "url": "https://plushparadise.co.uk/products/worlds-smallest-needoh-novelty-mini-sensory-stress-ball-x1-supplied-colour-selected-at-random"
   },
   "So Realistic|10282797990221": {
    "first_seen": "2026-09-25T08:56:30+00:00",
@@ -1924,48 +1942,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 10007,
+   "consecutive_failures": 10037,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 10007,
+   "consecutive_failures": 10037,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T15:54:37+00:00"
+   "last_success": "2026-11-27T16:54:36+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 10007,
+   "consecutive_failures": 10037,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
