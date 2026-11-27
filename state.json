@@ -1029,8 +1029,8 @@
   },
   "Plush Paradise|14972429369725": {
    "first_seen": "2026-11-27T00:01:21+00:00",
-   "in_stock": true,
-   "last_change": "2026-11-27T00:01:21+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-27T00:03:21+00:00",
    "name": "Needoh Teenie Cool Cats (Colours Selected at Random - x1 Pack of 3) - Limit of 2 per Customer/Household",
    "price": "£8.99",
    "shop": "Plush Paradise",
@@ -1038,8 +1038,8 @@
   },
   "Plush Paradise|14986545660285": {
    "first_seen": "2026-11-26T00:44:16+00:00",
-   "in_stock": true,
-   "last_change": "2026-11-26T00:44:16+00:00",
+   "in_stock": false,
+   "last_change": "2026-11-27T00:03:21+00:00",
    "name": "NeeDoh Gumdrop Sensory Fidget Toy (x1 Supplied) Approx 2.25 Inch – Limited to x1 Colour per Customer/Household",
    "price": "£8.99",
    "shop": "Plush Paradise",
@@ -1888,48 +1888,48 @@
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "Funky Fidgets": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "Jukupop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "Menkind": {
-   "consecutive_failures": 9698,
+   "consecutive_failures": 9699,
    "last_error": "no products found (site may be blocking automated checks) - https://www.menkind.co.uk/toys/fidget-toys/needoh: HTTP 403; https://www.menkind.co.uk/search?q=needoh: HTTP 403"
   },
   "Mulberry Bush": {
-   "consecutive_failures": 9698,
+   "consecutive_failures": 9699,
    "last_error": "no products found (site may be blocking automated checks) - https://www.mulberrybush.co.uk/needoh: HTTP 403"
   },
   "Plush Paradise": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "So Realistic": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "The Dyslexia Shop": {
    "consecutive_failures": 0,
    "failure_alerted": false,
    "initialized": true,
-   "last_success": "2026-11-27T00:01:21+00:00"
+   "last_success": "2026-11-27T00:03:21+00:00"
   },
   "Urban Outfitters": {
-   "consecutive_failures": 9698,
+   "consecutive_failures": 9699,
    "last_error": "no products found (site may be blocking automated checks) - https://www.urbanoutfitters.com/en-gb/search?q=needoh: HTTP 403"
   }
  }
